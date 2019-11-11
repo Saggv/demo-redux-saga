@@ -1,0 +1,9 @@
+export const  FETCH_TASK = "FETCH_TASK";
+export const  FETCH_TASK_SUCCESS = "FETCH_TASK_SUCCESS";
+export const  FETCH_TASK_FAILDED = "FETCH_TASK_FAILDED";
+export const FILTER_TASK_SUCCESS = "FILTER_TASK_CUCCESS";
+export const FILTER_TASK = "FILTER_TASK";
+export const ADD_TASK = "ADD_TASK";
+export const ADD_TASK_SUCCESS = "ADD_TASK_SUCCESS";
+export const ADD_TASK_FAIL = "ADD_TASK_FAIL";
+export const EDIT_TASK = "EDIT_TASK";

@@ -1,25 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import theme from './Common/theme';
+import { ThemeProvider } from '@material-ui/styles';
+import TaskBoarks from './Container/TaskBoarks';
+import {Provider} from "react-redux";
+import configStore from './Redux/ConfigStore';
 
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import Loading from './Loading/Loading';
+import ModalComponet from './Component/Modal';
+
+const store = configStore();
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+        <ThemeProvider theme={theme}>
+              <ToastContainer />
+              <TaskBoarks></TaskBoarks>
+              <Loading></Loading>
+              <ModalComponet></ModalComponet>
+        </ThemeProvider>
+    </Provider>
   );
 }
 
